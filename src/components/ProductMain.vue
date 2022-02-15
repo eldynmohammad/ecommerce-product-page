@@ -3,11 +3,13 @@
     class="flex flex-col items-center gap-4 pb-8 mx-auto md:px-16 max-w-7xl md:flex-row md:gap-16"
   >
     <div class="w-full max-w-lg">
-      <div
-        class="relative overflow-hidden pointer-events-none md:cursor-pointer md:rounded-3xl md:pointer-events-auto"
-        @click="isModalOpen = true; modalPic = currentPic"
-      >
-        <img :src="`/image-product-${currentPic}.jpg`" alt="Product Image" />
+      <div class="relative overflow-hidden md:rounded-3xl">
+        <img
+          :src="`/image-product-${currentPic}.jpg`"
+          class="pointer-events-none md:cursor-pointer md:pointer-events-auto"
+          alt="Product Image"
+          @click="isModalOpen = true; modalPic = currentPic"
+        />
         <div
           class="absolute flex items-center justify-center w-12 h-12 -translate-y-1/2 bg-gray-200 rounded-full cursor-pointer md:hidden left-5 top-1/2 hover:fill-primary-orange"
           @click="currentPic < 2 ? this.currentPic = 4 : this.currentPic--"
