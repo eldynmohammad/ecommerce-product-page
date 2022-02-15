@@ -7,18 +7,18 @@
         class="relative overflow-hidden pointer-events-none md:cursor-pointer md:rounded-3xl md:pointer-events-auto"
         @click="isModalOpen = true; modalPic = currentPic"
       >
-        <img :src="`/image-product-${currentPic}.jpg`" />
+        <img :src="`/image-product-${currentPic}.jpg`" alt="Product Image" />
         <div
           class="absolute flex items-center justify-center w-12 h-12 -translate-y-1/2 bg-gray-200 rounded-full cursor-pointer md:hidden left-5 top-1/2 hover:fill-primary-orange"
           @click="currentPic < 2 ? this.currentPic = 4 : this.currentPic--"
         >
-          <img src="@/assets/icon-previous.svg" alt />
+          <img src="@/assets/icon-previous.svg" alt="previous icon" />
         </div>
         <div
           class="absolute flex items-center justify-center w-12 h-12 -translate-y-1/2 bg-gray-200 rounded-full cursor-pointer md:hidden right-5 top-1/2 hover:fill-primary-orange"
           @click="currentPic > 3 ? this.currentPic = 1 : this.currentPic++"
         >
-          <img src="@/assets/icon-next.svg" alt />
+          <img src="@/assets/icon-next.svg" alt="next icon" />
         </div>
       </div>
       <div class="hidden grid-cols-4 gap-8 mt-8 md:grid">
@@ -26,28 +26,28 @@
           :class="[currentPic === 1 ? 'ring-4 ring-primary-orange -translate-y-1 shadow-xl' : '', 'relative cursor-pointer rounded-2xl overflow-hidden transition-all duration-300 hover:ring-4 hover:ring-primary-orange']"
           @click="currentPic = 1"
         >
-          <img src="/image-product-1.jpg" class />
+          <img src="/image-product-1.jpg" alt="product image" />
           <div v-if="currentPic === 1" class="absolute inset-0 bg-white/50"></div>
         </div>
         <div
           :class="[currentPic == 2 ? 'ring-4 ring-primary-orange -translate-y-1 shadow-xl' : '', 'relative cursor-pointer rounded-2xl overflow-hidden transition-all duration-300  hover:ring-4 hover:ring-primary-orange']"
           @click="currentPic = 2"
         >
-          <img src="/image-product-2.jpg" />
+          <img src="/image-product-2.jpg" alt="product image" />
           <div v-if="currentPic === 2" class="absolute inset-0 bg-white/50"></div>
         </div>
         <div
           :class="[currentPic == 3 ? 'ring-4 ring-primary-orange -translate-y-1 shadow-xl' : '', 'relative cursor-pointer rounded-2xl overflow-hidden transition-all duration-300  hover:ring-4 hover:ring-primary-orange']"
           @click="currentPic = 3"
         >
-          <img src="/image-product-3.jpg" />
+          <img src="/image-product-3.jpg" alt="product image" />
           <div v-if="currentPic === 3" class="absolute inset-0 bg-white/50"></div>
         </div>
         <div
           :class="[currentPic == 4 ? 'ring-4 ring-primary-orange -translate-y-1 shadow-xl' : '', 'relative cursor-pointer rounded-2xl overflow-hidden transition-all duration-300  hover:ring-4 hover:ring-primary-orange']"
           @click="currentPic = 4"
         >
-          <img src="/image-product-4.jpg" />
+          <img src="/image-product-4.jpg" alt="product image" />
           <div v-if="currentPic === 4" class="absolute inset-0 bg-white/50"></div>
         </div>
       </div>
@@ -75,7 +75,7 @@
       <div class="flex flex-col gap-4 mt-8 md:flex-row">
         <div class="flex items-center bg-gray-100 rounded-xl">
           <div class="px-6 py-4 cursor-pointer" @click="cart--; cart < 0 ? cart = 0 : cart">
-            <img src="@/assets/icon-minus.svg" class="w-5 md:w-3" />
+            <img src="@/assets/icon-minus.svg" class="w-5 md:w-3" alt="decrease icon" />
           </div>
           <div class="w-full px-2 py-4 md:w-8">
             <input
@@ -85,7 +85,7 @@
             />
           </div>
           <div class="px-6 py-4 cursor-pointer" @click="cart++">
-            <img src="@/assets/icon-plus.svg" class="w-5 md:w-3" />
+            <img src="@/assets/icon-plus.svg" class="w-5 md:w-3" alt="add icon" />
           </div>
         </div>
         <button
@@ -117,22 +117,23 @@
           <img
             src="@/assets/icon-close.svg"
             class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="close icon"
           />
         </div>
       </div>
       <div class="relative mt-4">
-        <img :src="`/image-product-${modalPic}.jpg`" class="rounded-3xl" />
+        <img :src="`/image-product-${modalPic}.jpg`" class="rounded-3xl" alt="product image" />
         <div
           class="absolute flex items-center justify-center w-12 h-12 -translate-y-1/2 bg-gray-200 rounded-full cursor-pointer -left-5 top-1/2 hover:fill-primary-orange"
           @click="previousPic"
         >
-          <img src="@/assets/icon-previous.svg" alt />
+          <img src="@/assets/icon-previous.svg" alt="previous icon" />
         </div>
         <div
           class="absolute flex items-center justify-center w-12 h-12 -translate-y-1/2 bg-gray-200 rounded-full cursor-pointer -right-5 top-1/2 hover:fill-primary-orange"
           @click="nextPic"
         >
-          <img src="@/assets/icon-next.svg" alt />
+          <img src="@/assets/icon-next.svg" alt="next icon" />
         </div>
       </div>
       <div class="grid grid-cols-4 gap-8 mt-8">
@@ -140,28 +141,28 @@
           :class="[modalPic === 1 ? 'ring-4 ring-primary-orange -translate-y-1' : '', 'relative cursor-pointer rounded-2xl overflow-hidden transition-all duration-300  hover:ring-4 hover:ring-primary-orange']"
           @click="modalPic = 1"
         >
-          <img src="/image-product-1.jpg" class />
+          <img src="/image-product-1.jpg" alt="product image" class />
           <div v-if="modalPic === 1" class="absolute inset-0 bg-white/50"></div>
         </div>
         <div
           :class="[modalPic == 2 ? 'ring-4 ring-primary-orange -translate-y-1' : '', 'relative cursor-pointer rounded-2xl overflow-hidden transition-all duration-300  hover:ring-4 hover:ring-primary-orange']"
           @click="modalPic = 2"
         >
-          <img src="/image-product-2.jpg" />
+          <img src="/image-product-2.jpg" alt="product image" />
           <div v-if="modalPic === 2" class="absolute inset-0 bg-white/50"></div>
         </div>
         <div
           :class="[modalPic == 3 ? 'ring-4 ring-primary-orange -translate-y-1' : '', 'relative cursor-pointer rounded-2xl overflow-hidden transition-all duration-300  hover:ring-4 hover:ring-primary-orange']"
           @click="modalPic = 3"
         >
-          <img src="/image-product-3.jpg" />
+          <img src="/image-product-3.jpg" alt="product image" />
           <div v-if="modalPic === 3" class="absolute inset-0 bg-white/50"></div>
         </div>
         <div
           :class="[modalPic == 4 ? 'ring-4 ring-primary-orange -translate-y-1' : '', 'relative cursor-pointer rounded-2xl overflow-hidden transition-all duration-300  hover:ring-4 hover:ring-primary-orange']"
           @click="modalPic = 4"
         >
-          <img src="/image-product-4.jpg" />
+          <img src="/image-product-4.jpg" alt="product image" />
           <div v-if="modalPic === 4" class="absolute inset-0 bg-white/50"></div>
         </div>
       </div>

@@ -3,14 +3,19 @@
     <div class="container flex justify-between mx-auto bg-white md:border-b">
       <div class="relative flex items-center w-full gap-4 py-6 md:py-0 md:gap-8">
         <div class="flex items-center gap-4 px-6 md:gap-0">
-          <img src="@/assets/icon-menu.svg" class="cursor-pointer md:hidden" @click="isOpen = true" />
-          <img src="@/assets/logo.svg" />
+          <img
+            src="@/assets/icon-menu.svg"
+            class="cursor-pointer md:hidden"
+            @click="isOpen = true"
+            alt="menu icon"
+          />
+          <img src="@/assets/logo.svg" alt="logo icon" />
         </div>
         <div :class="[isOpen ? 'block' : 'hidden', 'fixed md:hidden inset-0 z-20 bg-black/70']"></div>
 
         <div :class="[isOpen ? 'left-0' : '-left-[100vw]', 'nav-mobile']">
           <span class="pt-8 mb-10 cursor-pointer md:hidden" @click="isOpen = false">
-            <img src="@/assets/icon-close.svg" />
+            <img src="@/assets/icon-close.svg" alt="close icon" />
           </span>
           <a href="#" class="md:py-10 hover:text-gray-700">Collections</a>
           <a href="#" class="md:py-10 hover:text-gray-700">Men</a>

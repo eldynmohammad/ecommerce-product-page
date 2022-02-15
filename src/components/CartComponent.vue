@@ -5,14 +5,18 @@
     <div class="relative w-full px-8 py-8 text-lg font-bold border-b">
       Cart
       <div class="absolute p-4 -translate-y-1/2 cursor-pointer right-4 top-1/2" @click="close">
-        <img src="@/assets/icon-close.svg" alt />
+        <img src="@/assets/icon-close.svg" alt="close icon" />
       </div>
     </div>
     <div class="w-full px-8 py-4">
       <p v-if="quantity < 1" class="py-16 font-bold text-center text-gray-500">Your cart is empty.</p>
       <div class="pb-4" v-else>
         <div class="relative flex gap-4">
-          <img src="/image-product-1.jpg" class="object-cover w-14 h-14 rounded-xl" />
+          <img
+            src="/image-product-1.jpg"
+            class="object-cover w-14 h-14 rounded-xl"
+            alt="product image"
+          />
           <div>
             <p class="text-gray-500 font">Fall Limited Edition Sneakers</p>
             <p>
@@ -26,7 +30,7 @@
             class="absolute p-4 -translate-y-1/2 cursor-pointer -right-4 top-1/2 hover:opacity-70"
             @click="removeCart"
           >
-            <img src="@/assets/icon-delete.svg" alt />
+            <img src="@/assets/icon-delete.svg" alt="remove icon" />
           </div>
         </div>
         <button
