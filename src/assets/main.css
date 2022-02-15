@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.nav-mobile {
+  @apply absolute top-0 z-50 flex flex-col w-full min-h-screen gap-6 px-8 text-lg font-bold text-gray-900 bg-white md:text-base md:text-gray-500 md:min-h-0 md:static md:flex-row md:w-auto md:gap-8 md:font-normal transition-all duration-300
+}
