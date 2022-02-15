@@ -30,16 +30,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot-1.png)
-![](./screenshot-2.png
-![](./screenshot-3.png
-![](./screenshot-4.png
-![](./screenshot-5.png
+![](./screenshot-1.png)  
+![](./screenshot-2.png)  
+![](./screenshot-3.png)  
+![](./screenshot-4.png) 
+![](./screenshot-5.png)  
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/eldynmohammad/ecommerce-product-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/eldynmohammad/ecommerce-product-page)
+- Live Site URL: [Netlify](https://ecommerce-product-vue.netlify.app/)
 
 
 ## My Process
