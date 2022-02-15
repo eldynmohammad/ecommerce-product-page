@@ -12,7 +12,7 @@
       <p v-if="quantity < 1" class="py-16 font-bold text-center text-gray-500">Your cart is empty.</p>
       <div class="pb-4" v-else>
         <div class="relative flex gap-4">
-          <img src="/image-product-1.jpg" class="w-14 rounded-xl" />
+          <img src="/image-product-1.jpg" class="object-cover w-14 h-14 rounded-xl" />
           <div>
             <p class="text-gray-500 font">Fall Limited Edition Sneakers</p>
             <p>
